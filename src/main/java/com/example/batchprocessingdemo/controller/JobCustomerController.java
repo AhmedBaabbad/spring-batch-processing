@@ -29,8 +29,10 @@ public class JobCustomerController {
     @PostMapping("/importCustomers")
     public void importCVSToDB()
     {
+
         JobParameters jobParameters= new JobParametersBuilder()
                 .addLong("startAt", System.currentTimeMillis()).toJobParameters();
+        System.out.println(" job is created");
 
         try {
             jobLauncher.run(job, jobParameters);
