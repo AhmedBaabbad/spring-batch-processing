@@ -32,7 +32,6 @@ public class JobCustomerController {
 
         JobParameters jobParameters= new JobParametersBuilder()
                 .addLong("startAt", System.currentTimeMillis()).toJobParameters();
-        System.out.println(" job is created");
 
         try {
             jobLauncher.run(job, jobParameters);
